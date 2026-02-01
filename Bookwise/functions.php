@@ -12,17 +12,6 @@ function view($view, $data = []) {
 
 }
 
-function dd(...$dump) {
-
-    echo '<pre>';
-
-    var_dump($dump);
-
-    die();
-
-    echo '</pre>';
-
-}
 
 function abort($code) {
 

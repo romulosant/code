@@ -3,6 +3,9 @@
   <component name="LaravelPint">
     <laravel_pint_settings>
       <LaravelPintConfiguration tool_path="$PROJECT_DIR$/caixinha/vendor/bin/pint" />
+      <laravel_pint_by_interpreter asDefaultInterpreter="true" interpreter_id="7c8366d4-bb62-429a-a206-02af16561d76" tool_path="C:\Users\Romulo\code\caixinha\vendor\bin\pint">
+        <option name="timeout" value="30000" />
+      </laravel_pint_by_interpreter>
     </laravel_pint_settings>
   </component>
   <component name="MessDetectorOptionsConfiguration">
