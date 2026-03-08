@@ -4,10 +4,10 @@ namespace src;
 
 namespace Romulo\Bliblioteca;
 
-class livro
+class Livro
 {
     //atribruto privado
-    private bool $diponivel = false;
+    private bool $diponivel;
 
     function __construct(private string $titulo, private string $autor)
     {

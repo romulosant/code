@@ -2,16 +2,14 @@
 
 namespace Romulo\Bliblioteca;
 
-class Professor extends Usuario
-
+class Aluno extends Usuario
 {
-    private  const MAX_LIVROS_EMPRESTADOS = 3;
+    private const MAX_LIVROS_EMPRESTADOS = 1;
+
 
     public function podePegarLivroEmprestado(): bool
     {
         return count($this->livrosEmprestados) < self::MAX_LIVROS_EMPRESTADOS;
     }
-
-
 
 }

@@ -2,7 +2,7 @@
 
 namespace Romulo\Bliblioteca;
 
-abstract class usuario
+abstract class Usuario
 {
     protected string $nome;
 
@@ -15,10 +15,16 @@ abstract class usuario
 
     abstract function podePegarLivroEmprestado(): bool;
 
-    public function adicionarLibvroEmprestado(livro $livro): void
-
+    public function adicionarLibvroEmprestado(Livro $livro): void
     {
-        $this->livrosEmprestados[] = $livro;
+
+        if ($this->podePegarLivroEmprestado() === true) {
+            $this->livrosEmprestados[] = $livro;
+        } else {
+           throw new \Exception("usuario nao pode pegar livro mas esta tentando");
+        }
+
+
     }
 
     public function removerLivroEmprestado(Livro $livro): void

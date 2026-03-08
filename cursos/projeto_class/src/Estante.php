@@ -4,14 +4,16 @@ namespace src;
 
 namespace Romulo\Bliblioteca;
 
-class estante
+class Estante
 {
     private array $livros = [];
 
-    public function adicionarLivros(livro $livro)
+    public function adicionarLivros(Livro $livro)
     {
         $this->livros[] = $livro;
+        $livro->marcarComoDisponivel();
     }
+
 
     public function removerLivros(livro $livro)
     {
@@ -21,7 +23,7 @@ class estante
         );
     }
 
-    public function buscarLivros(string $titulo): ?livro
+    public function buscarLivros(string $titulo): ?Livro
     {
         foreach ($this->livros as $livro) {
             if (str_contains(
