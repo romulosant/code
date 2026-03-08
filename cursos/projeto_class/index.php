@@ -15,15 +15,21 @@ $livro2->marcarComoDisponivel();
 
 
 
-$estante = new estante();
 
-$estante->adicionarLivros($livro);
-$estante->adicionarLivros($livro2);
+$professor = new \Romulo\Bliblioteca\Professor("professor");
 
-$busca = $estante->buscarLivros("senhor");
+$professor->adicionarLibvroEmprestado($livro2);
+$professor->adicionarLibvroEmprestado($livro2);
+
+$professor->adicionarLibvroEmprestado($livro);
+
 
 echo "<pre>";
-var_dump($estante->listarLivros());
+var_dump($professor->podePegarLivroEmprestado());
+
+
+
+
 
 
 

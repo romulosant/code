@@ -1,16 +1,20 @@
 <?php
 
 namespace src;
+
 namespace Romulo\Bliblioteca;
 
 class estante
 {
     private array $livros = [];
-    public function adicionarLivros(livro $livro){
+
+    public function adicionarLivros(livro $livro)
+    {
         $this->livros[] = $livro;
     }
 
-    public function removerLivros(livro $livro){
+    public function removerLivros(livro $livro)
+    {
         $this->livros = array_filter(
             $this->livros,
             fn($l) => $l !== $livro
@@ -30,8 +34,9 @@ class estante
         return null;
     }
 
-    public function listarLivros(): array{
-        return array_filter($this->livros, function (livro $livro){
+    public function listarLivros(): array
+    {
+        return array_filter($this->livros, function (livro $livro) {
             return $livro->estaDisponivel();
         });
     }
