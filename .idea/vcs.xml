@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/caixinha" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cursos/projeto_class" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/php-auth-sistema" vcs="Git" />
   </component>
 </project>
